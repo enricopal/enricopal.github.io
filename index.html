@@ -30,6 +30,7 @@
         background-color: #FF6F61; /* coral red header */
         border-radius: 0 0 20px 20px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
     }
 
     .thumbnail {
@@ -43,7 +44,7 @@
     .name-block {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* always center content */
         width: 100%;
     }
 
@@ -56,7 +57,7 @@
     h2 {
         font-size: 1.2rem;
         font-weight: 400;
-        color: #FF6F61; /* coral red subtitle */
+        color: #FFF; /* white subtitle for contrast */
         margin-top: 5px;
     }
 
@@ -120,20 +121,27 @@
         margin: 4rem 0;
     }
 
+    @media (max-width: 600px) {
+        .header {
+            flex-direction: column;
+        }
+        .name-block {
+            align-items: center;
+        }
+    }
 </style>
 </head>
 <body>
 
 <!-- Header with thumbnail, name, and social links -->
 <div class="header">
-    <img src="img/mia_foto_thumbnail.jpg" alt="Enrico Palumbo" class="thumbnail">
+    <img src="thumbnail.jpg" alt="Enrico Palumbo" class="thumbnail">
     <div class="name-block">
         <h1>Enrico Palumbo</h1>
         <h2>Senior Research Scientist @ Spotify</h2>
         <div class="social-links">
-            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-            <a href="https://x.com/" target="_blank">X</a>
+            <a href="https://www.linkedin.com/in/enrico-palumbo-0272baa8" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.it/citations?hl=en&user=WINnyNwAAAAJ" target="_blank">Google Scholar</a>
         </div>
     </div>
 </div>
@@ -149,7 +157,7 @@
 
     <div class="terminal-line"><span class="prompt">&gt;</span>In my free time, I play guitar in a band called Alephant! Check it out on...<a href="https://open.spotify.com/artist/7D1JS6eYVoC8rG1q02HWRk" target="_blank">Spotify!</a></div>
 
-    <div class="terminal-line"><span class="prompt">&gt;</span>If you want to learn more about my work or get in touch, check out the links to LinkedIn, Scholar, and X above!</div>
+    <div class="terminal-line"><span class="prompt">&gt;</span>If you want to learn more about my work or get in touch, check out my Scholar profile or send me a DM on LinkedIn!</div>
 </div>
 
 <footer>© 2025 Enrico Palumbo</footer>
